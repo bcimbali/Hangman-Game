@@ -17,6 +17,8 @@ let computerChoice = words[randomNumber];
 let guessedLetters = document.getElementById("already-guessed");
 // Create a variable called computerArray and use Array.from to split the computer's word into an array of its letters.
 let computerArray = Array.from(computerChoice);
+// Set a guessIndex of -1 so that it's always smaller than a value in an array (i.e., 0).
+let guessIndex = -1;
 
 // document.getElementById("wins").innerHTML = guesses_remaining;
 // let letterBlanks = document.getElementById("blanks");
@@ -24,6 +26,7 @@ let computerArray = Array.from(computerChoice);
 
 // ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
 
+// When the window loads, set the number of blanks
 window.onload = function() {
     let numberSpaces = computerArray.fill("_");
     document.getElementById("blanks").innerHTML = numberSpaces;
@@ -31,11 +34,16 @@ window.onload = function() {
 
 
 document.onkeyup = function(event) {
+    // On the key up, set the variable userText to the key content of the event.
     userText = event.key;
+    // Add the key value of the event to the empty lettersGuessed array
     lettersGuessed.push(userText);
+    // In the DOM, get the already-guessed id and set it to the lettersGuessed array.
     document.getElementById("already-guessed").innerHTML = lettersGuessed;    
 
+    // If the computer word array contains the user's key value, run this code
     if (computerArray.includes(userText)) {
+        // In the DOM, grab the element by the id of blanks and set it to the userText.
         document.getElementById("blanks").innerHTML = userText;
     }
 
