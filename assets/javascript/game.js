@@ -1,14 +1,16 @@
 
 // Set guess to 10
 let guessesRemaining = 10;
+// Empty array to hold guessed letters that weren't correct.
 let lettersGuessed = [];
 
+// Array of possible words in the game.
 let words = ["apples", "bananas", "oranges", "kiwis", "watermelons"];
 
 // document.getElementById("wins").innerHTML = guesses_remaining;
 // Letters already guessed is cleared
 
-let randomNumber = Math.floor((Math.random() * 5));
+let randomNumber = Math.floor((Math.random() * words.length));
 let computerChoice = words[randomNumber];
 let guessedLetters = document.getElementById("already-guessed");
 let computerArray = Array.from(computerChoice);
