@@ -36,8 +36,26 @@ blanksGuessStr = blanksGuess.join(" ");
 // Go get the HTML element with the id of blanks and set it to that blanksGuessStr.
 document.getElementById("blanks").innerHTML = blanksGuessStr; 
 
+function init() {
+    guessIndex = -1;
+    guessesRemaining = 10;
+    document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
+    lettersGuessed = [];
+    // guessedLetters = document.getElementById("already-guessed");
+    document.getElementById("already-guessed").innerHTML = lettersGuessed;
+    randomNumber = Math.floor((Math.random() * words.length));
+    computerChoice = words[randomNumber];
+    computerArray = Array.from(computerChoice);
+    blanksGuess = [];
+    for (var i=0; i < computerChoice.length; i++) {
+        blanksGuess.push("_");
+    }
+    blanksGuessStr = blanksGuess.join(" ");
+    document.getElementById("blanks").innerHTML = blanksGuessStr;
+    document.getElementById("wins").innerHTML = wins;
+    document.getElementById("losses").innerHTML = losses;
+}
 
-// window.onload = init;
 // ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
 
 document.onkeyup = function(event) {
@@ -60,20 +78,18 @@ document.onkeyup = function(event) {
                     blanksGuessStr = blanksGuess.join(" ");
                     document.getElementById("blanks").innerHTML = blanksGuessStr;
                 }
-            }
-            // console.log(guessIndex);
-            // console.log(blanksGuessStr);
-            // console.log(blanksGuess);
+            }   
         }
     if (guessesRemaining === 0) {
         losses++;
-        alert("You lose");
-        // init();
+        // alert("You lose");
+        init();
     }
     else if (computerArray.toString() === blanksGuess.toString()) {
         wins++;
-        alert("You win!");
-        // init();
+        // alert("You win!");
+        init();
     }
-
 }
+
+// init();
