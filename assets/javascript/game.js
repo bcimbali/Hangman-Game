@@ -65,20 +65,22 @@ document.onkeyup = function(event) {
             alert("Please choose another letter!");
         }
         else {
-            guessesRemaining--;
-            lettersGuessed.push(userText);
-            document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
-            // Add the key value of the event to the empty lettersGuessed array
-            document.getElementById("already-guessed").innerHTML = lettersGuessed;
-            // In the DOM, get the already-guessed id and set it to the lettersGuessed array.
-            // An if statement that checks whether the key the user presses is an index in the computer array.
-            for (var i=0; i < computerChoice.length; i++) {
-                if (computerChoice[i] === userText) {
-                    blanksGuess[i] = userText;
-                    blanksGuessStr = blanksGuess.join(" ");
-                    document.getElementById("blanks").innerHTML = blanksGuessStr;
+            if (computerArray.includes(userText) === false) {
+                guessesRemaining--;
+                document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
+                lettersGuessed.push(userText);
+                // document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
+                document.getElementById("already-guessed").innerHTML = lettersGuessed;
+            } 
+            else { 
+                for (var i=0; i < computerChoice.length; i++) {
+                    if (computerChoice[i] === userText) {
+                        blanksGuess[i] = userText;
+                        blanksGuessStr = blanksGuess.join(" ");
+                        document.getElementById("blanks").innerHTML = blanksGuessStr;
+                    }
                 }
-            }   
+            }          
         }
     if (guessesRemaining === 0) {
         losses++;
@@ -91,5 +93,3 @@ document.onkeyup = function(event) {
         init();
     }
 }
-
-// init();
