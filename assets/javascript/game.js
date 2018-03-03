@@ -7,6 +7,9 @@ document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
 // Empty array to hold guessed letters that weren't correct.
 let lettersGuessed = [];
 
+let wins = 0;
+let losses = 0;
+
 // Array of possible words in the game.
 let words = ["apples", "bananas", "oranges", "kiwis", "watermelons"];
 
@@ -38,7 +41,7 @@ document.getElementById("blanks").innerHTML = blanksGuessStr;
 
 document.onkeyup = function(event) {
     // On the key up, set the variable userText to the key content of the event.
-    userText = event.key;
+    userText = event.key.toLowerCase();
     if (lettersGuessed.includes(userText)) {
         alert("Please choose another letter!");
     }
@@ -52,16 +55,23 @@ document.onkeyup = function(event) {
         // An if statement that checks whether the key the user presses is an index in the computer array.
         for (var i=0; i < computerChoice.length; i++) {
             if (computerChoice[i] === userText) {
-                console.log("It went to TRUE");
                 blanksGuess[i] = userText;
                 blanksGuessStr = blanksGuess.join(" ");
                 document.getElementById("blanks").innerHTML = blanksGuessStr;
             }
-        }
-
+    }
         console.log(guessIndex);
-        
         console.log(blanksGuessStr);
+        console.log(blanksGuess);
+    }
+
+    if (guessesRemaining === 0) {
+        losses++;
+        alert("You lose");
+    }
+    else if (computerArray.toString() === blanksGuess.toString()) {
+        wins++;
+        alert("You win!");
     }
 
 }
