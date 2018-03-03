@@ -3,6 +3,7 @@
 
 // Set guess to 10.
 let guessesRemaining = 10;
+document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
 // Empty array to hold guessed letters that weren't correct.
 let lettersGuessed = [];
 
@@ -26,7 +27,7 @@ for (var i=0; i < computerChoice.length; i++) {
     blanksGuess.push("_");
 }
 
-let correctArray = [];
+// let correctArray = [];
 // Create a string from the blank guess array and join them together with a white space in between.
 blanksGuessStr = blanksGuess.join(" ");
 // Go get the HTML element with the id of blanks and set it to that blanksGuessStr.
@@ -38,6 +39,8 @@ document.getElementById("blanks").innerHTML = blanksGuessStr;
 document.onkeyup = function(event) {
     // On the key up, set the variable userText to the key content of the event.
     userText = event.key;
+    guessesRemaining--;
+    document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
     // Add the key value of the event to the empty lettersGuessed array
     lettersGuessed.push(userText);
     document.getElementById("already-guessed").innerHTML = lettersGuessed;
@@ -46,24 +49,12 @@ document.onkeyup = function(event) {
     // An if statement that checks whether the key the user presses is an index in the computer array.
         for (var i=0; i < computerChoice.length; i++) {
             if (computerChoice[i] === userText) {
-                correctArray.push(i);
+                // correctArray.push(i);
                 blanksGuess[i] = userText;
                 blanksGuessStr = blanksGuess.join(" ");
                 document.getElementById("blanks").innerHTML = blanksGuessStr;
             }
         }
-
-    // for (var i=0; i < computerChoice.length; i++) {
-    //     if (computerArray.indexOf(userText) > -1) {
-    //         guessIndex = computerChoice.indexOf(userText);
-    //         blanksGuess[guessIndex] = userText;
-    //         blanksGuessStr = blanksGuess.join(" ");
-    //         document.getElementById("blanks").innerHTML = blanksGuessStr;
-    //         }
-    //     else {
-    //         console.log("it went to else");
-    //     }
-    // }
 
 
     console.log(guessIndex);
@@ -87,7 +78,17 @@ document.onkeyup = function(event) {
 
 
 
-
+    // for (var i=0; i < computerChoice.length; i++) {
+    //     if (computerArray.indexOf(userText) > -1) {
+    //         guessIndex = computerChoice.indexOf(userText);
+    //         blanksGuess[guessIndex] = userText;
+    //         blanksGuessStr = blanksGuess.join(" ");
+    //         document.getElementById("blanks").innerHTML = blanksGuessStr;
+    //         }
+    //     else {
+    //         console.log("it went to else");
+    //     }
+    // }
 
 
 
