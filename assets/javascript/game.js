@@ -39,27 +39,30 @@ document.getElementById("blanks").innerHTML = blanksGuessStr;
 document.onkeyup = function(event) {
     // On the key up, set the variable userText to the key content of the event.
     userText = event.key;
-    guessesRemaining--;
-    document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
-    // Add the key value of the event to the empty lettersGuessed array
-    lettersGuessed.push(userText);
-    document.getElementById("already-guessed").innerHTML = lettersGuessed;
-    // In the DOM, get the already-guessed id and set it to the lettersGuessed array.
-    
-    // An if statement that checks whether the key the user presses is an index in the computer array.
+    if (lettersGuessed.includes(userText)) {
+        alert("Please choose another letter!");
+    }
+    else {
+        guessesRemaining--;
+        lettersGuessed.push(userText);
+        document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
+        // Add the key value of the event to the empty lettersGuessed array
+        document.getElementById("already-guessed").innerHTML = lettersGuessed;
+        // In the DOM, get the already-guessed id and set it to the lettersGuessed array.
+        // An if statement that checks whether the key the user presses is an index in the computer array.
         for (var i=0; i < computerChoice.length; i++) {
             if (computerChoice[i] === userText) {
-                // correctArray.push(i);
+                console.log("It went to TRUE");
                 blanksGuess[i] = userText;
                 blanksGuessStr = blanksGuess.join(" ");
                 document.getElementById("blanks").innerHTML = blanksGuessStr;
             }
         }
 
-
-    console.log(guessIndex);
-    
-    console.log(blanksGuessStr);
+        console.log(guessIndex);
+        
+        console.log(blanksGuessStr);
+    }
 
 }
 
