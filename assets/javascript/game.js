@@ -12,7 +12,7 @@ let guessesRemaining = 10;
 // Go to the DOM and the get the guesses-remaining id and set it to guessRemaining.
 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
 // Array of possible words in the game.
-let words = ["apples", "bananas", "oranges", "kiwis", "watermelons"];
+let words = ["apples", "bananas", "oranges", "kiwis", "watermelons", "new york"];
 // Create a variable called lettersGuessed that is an empty array to hold guessed letters that weren't correct.
 let lettersGuessed = [];
 // Generate a random number based on the length of the array.
@@ -23,8 +23,6 @@ let computerChoice = words[randomNumber];
 let computerArray = Array.from(computerChoice);
 // Create a variable and set it to the reference in the HTML id of already-guessed.
 let guessedLetters = document.getElementById("already-guessed");
-// Set a guessIndex of -1 so that it's always smaller than a value in an array (i.e., 0).
-let guessIndex = -1;
 //  Create a variable called blanksGuess and set it to an empty array - this will hold our blanks for the computer word.
 let blanksGuess = [];
 // Set the number of blanks equal to the length of the word.
@@ -37,7 +35,6 @@ blanksGuessStr = blanksGuess.join(" ");
 document.getElementById("blanks").innerHTML = blanksGuessStr; 
 
 function init() {
-    guessIndex = -1;
     guessesRemaining = 10;
     document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
     lettersGuessed = [];
