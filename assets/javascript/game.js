@@ -62,7 +62,7 @@ document.onkeyup = function(event) {
             alert("Please choose another letter!");
         }
         else {
-            if (computerArray.includes(userText) === false) {
+            if (computerChoice.includes(userText) === false) {
                 guessesRemaining--;
                 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
                 lettersGuessed.push(userText);
