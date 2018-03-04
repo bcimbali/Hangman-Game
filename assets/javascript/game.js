@@ -12,22 +12,22 @@ let guessesRemaining = 10;
 // Go to the DOM and the get the guesses-remaining id and set it to guessRemaining.
 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
 // Array of possible words in the game.
-let words = ["apples", "bananas", "oranges", "kiwis", "watermelons", "new york"];
+let words = ["apples", "bananas", "oranges", "kiwis", "watermelons", "new york", "rhode island"];
 // Create a variable called lettersGuessed that is an empty array to hold guessed letters that weren't correct.
 let lettersGuessed = [];
+// Create a variable and set it to the reference in the HTML id of already-guessed.
+let guessedLetters = document.getElementById("already-guessed");
 // Generate a random number based on the length of the array.
 let randomNumber = Math.floor((Math.random() * words.length));
 // Create a variable called 'computerChoice' and set it to a random word from our words array.
 let computerChoice = words[randomNumber];
 // Create a variable called computerArray and use Array.from to split the computer's word into an array of its letters.
 let computerArray = Array.from(computerChoice);
-// Create a variable and set it to the reference in the HTML id of already-guessed.
-let guessedLetters = document.getElementById("already-guessed");
 //  Create a variable called blanksGuess and set it to an empty array - this will hold our blanks for the computer word.
 let blanksGuess = [];
 // Set the number of blanks equal to the length of the word.
 for (var i=0; i < computerChoice.length; i++) {
-    blanksGuess.push("_");
+        blanksGuess.push("_");
 }
 // Create a string from the blank guess array and join them together with a white space in between.
 blanksGuessStr = blanksGuess.join(" ");
@@ -45,7 +45,7 @@ function init() {
     computerArray = Array.from(computerChoice);
     blanksGuess = [];
     for (var i=0; i < computerChoice.length; i++) {
-        blanksGuess.push("_");
+            blanksGuess.push("_");
     }
     blanksGuessStr = blanksGuess.join(" ");
     document.getElementById("blanks").innerHTML = blanksGuessStr;
