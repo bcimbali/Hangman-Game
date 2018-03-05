@@ -1,6 +1,16 @@
 
 // ---------------------------------------------- CREATE VARIABLES ----------------------------------------------
-
+// window.onload = function() {
+//     document.getElementById("alaska").onmouseover = function()
+//       {
+//         this.style.backgroundColor = "#9933ff";
+//       }
+  
+//       document.getElementById("alaska").onmouseout = function()
+//       {
+//         this.style.backgroundColor = "transparent";
+//       }
+// }
 // Set the win & loss counts to zero.
 let wins = 0;
 document.getElementById("wins").innerHTML = wins;
@@ -92,6 +102,7 @@ document.getElementById("blanks").innerHTML = blanksGuessStr;
 let getHint = document.getElementById("hint");
 let clue = document.getElementById("clue");
 
+
 hints = ['This state introduced the Mardi Gras to the western world. The celebration is held on Shrove Tuesday, the day before Lent begins.',
             'This state motto is North to the Future.',
             'This state leads the nation in copper production.',
@@ -173,6 +184,13 @@ function init() {
     document.getElementById("losses").innerHTML = losses;
 }
 
+// function correctState() {
+//     document.getElementById("alaska") = function()
+//         {
+//         this.style.backgroundColor = "white";
+//         }
+// }
+
 // ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
 
 document.onkeyup = function(event) {
@@ -209,6 +227,7 @@ document.onkeyup = function(event) {
     }
     else if (computerArray.toString() === blanksGuess.toString()) {
         wins++;
+        document.getElementById(chosenState.toString()).style.backgroundColor = 'white';
         // alert("You win!");
         init();
     }

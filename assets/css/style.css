@@ -31,6 +31,16 @@ html {
     background-image: url("./../images/cartographer.png");
   }
 
+  .box {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    height: 7rem;
+    justify-content: center;
+    margin: 1%;
+    width: 100%;
+  }
+  
   .button {
     background-color: transparent;
     border: 2px solid white;
@@ -45,6 +55,10 @@ html {
       height: 150px;
       justify-content: center;
       width: 100%;
+  }
+
+  .hidden {
+    visibility: hidden;
   }
 
   .left-side-of-article {
@@ -64,6 +78,11 @@ html {
     line-height: 2rem;
     padding: 5%;
     width: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   .section {

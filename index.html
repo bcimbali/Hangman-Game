@@ -14,21 +14,136 @@
         CARTOGRAPHER HANGMAN
     </header>
     <section class="section">
-        <article class="article most-fonts">
-            <div class="left-side-of-article">
+            <article class="article most-fonts">
+                <div class="left-side-of-article">
 
+                </div>
+                <div class="right-side-of-article">
+                    <h1>Press any key to get started!</h1>
+                    <p>Wins: <span id="wins"></span></p>
+                    <p>Losses: <span id="losses"></span> </p>
+                    <p>Guesses remaing:  <span id="guesses-remaining"></span>  </p>
+                    <p>Word to Guess: <span id="blanks"></span> </p>
+                    <p>Letters already guessed:  <span id="already-guessed"></span>  </p>
+                    <button id="hint" class="button most-fonts">Hint</button> <span id="clue"></span> 
+                </div>
+            </article>
+        <section class="map">
+            <!-- <img src="./assets/images/us.svg" class="map"> -->
+            <div class="row">
+                <div class="box" id="alaska"><span>AK</span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="maine"><span>ME</span></div>
             </div>
-            <div class="right-side-of-article">
-                <h1>Press any key to get started!</h1>
-                <p>Wins: <span id="wins"></span></p>
-                <p>Losses: <span id="losses"></span> </p>
-                <p>Guesses remaing:  <span id="guesses-remaining"></span>  </p>
-                <p>Word to Guess: <span id="blanks"></span> </p>
-                <p>Letters already guessed:  <span id="already-guessed"></span>  </p>
-                <button id="hint" class="button most-fonts">Hint</button> <span id="clue"></span> 
+            <div class="row">
+                <div class="box hidden"><span></span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="vermont"><span>VT</span></div>
+                <div class="box" id="new-hampshire"><span>NH</span></div>
             </div>
-        </article>
-        <img src="./assets/images/us.svg" class="map">
+            <div class="row">
+                <div class="box hidden" id="washington"><span>WA</span></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box hidden"></div>
+                <div class="box"><span>OR</span></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box hidden"></div>
+            </div>
+            <div class="row">
+                <div class="box hidden"></div>
+                <div class="box" id="california"><span>CA</span></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box" id="delaware"><span>DE</span></div>
+                <div class="box hidden"></div>
+            </div>
+            <div class="row">
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="arizona"><span>AZ</span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span>D.C.</span></div>  
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+            </div>
+            <div class="row">
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="oklahoma"><span>OK</span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box"><span></span></div>
+                <div class="box" id="georgia"><span>GA</span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+            </div>
+            <div class="row">
+                <div class="box" id="hawaii"><span>HI</span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="texas"><span>TX</span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+                <div class="box" id="florida"><span>FL</span></div>
+                <div class="box hidden"></div>
+                <div class="box hidden"></div>
+            </div>
+        </section>
+
     </section> 
 
 
