@@ -8,18 +8,60 @@ let losses = 0;
 document.getElementById("losses").innerHTML = losses;
 
 // Set total guess count to 10.
-let guessesRemaining = 5;
+let guessesRemaining = 3;
 // Go to the DOM and the get the guesses-remaining id and set it to guessRemaining.
 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
 // Create a list of states
-let states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
-              'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois',
-              'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland',
-              'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana',
-              'nebraska', 'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york',
-              'north-carolina', 'north-dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode-island',
-              'south-carolina', 'south-dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west-virginia',
-              'wisconsin', 'wyoming'];
+let states = ['alabama', 
+                'alaska', 
+                'arizona', 
+                'arkansas', 
+                'california', 
+                'colorado',
+                'connecticut', 
+                'delaware', 
+                'florida', 
+                'georgia', 
+                'hawaii', 
+                'idaho', 
+                'illinois',
+                'indiana', 
+                'iowa', 
+                'kansas', 
+                'kentucky', 
+                'louisiana', 
+                'maine', 
+                'maryland',
+                'massachusetts', 
+                'michigan', 
+                'minnesota', 
+                'mississippi', 
+                'missouri', 
+                'montana',
+                'nebraska', 
+                'nevada', 
+                'new-hampshire', 
+                'new-jersey', 
+                'new-mexico', 
+                'new-york',
+                'north-carolina', 
+                'north-dakota', 
+                'ohio', 
+                'oklahoma', 
+                'oregon', 
+                'pennsylvania', 
+                'rhode-island',
+                'south-carolina', 
+                'south-dakota', 
+                'tennessee', 
+                'texas', 
+                'utah', 
+                'vermont', 
+                'virginia', 
+                'washington', 
+                'west-virginia',
+                'wisconsin', 
+                'wyoming'];
 // Generate a random number based on the length of the array.
 let randomNumber = Math.floor((Math.random() * states.length));
 // Chose a state for the game.
@@ -106,7 +148,7 @@ getHint.onclick = function() {
 };
 
 function init() {
-    guessesRemaining = 5;
+    guessesRemaining = 3;
     document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
     lettersGuessed = [];
     // guessedLetters = document.getElementById("already-guessed");
