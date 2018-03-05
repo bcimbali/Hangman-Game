@@ -13,6 +13,10 @@ html {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+.heading-font {
+    font-size: 3rem;
+}
+
 /**************** The main part of the page ******************************/
 
   .article {
@@ -25,6 +29,14 @@ html {
 
   .body {
     background-image: url("./../images/cartographer.png");
+  }
+
+  .header {
+      align-items: center;
+      display: flex;
+      height: 150px;
+      justify-content: center;
+      width: 100%;
   }
 
   .left-side-of-article {
@@ -50,5 +62,5 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10%;
+    /* padding-top: 10%; */
   }
