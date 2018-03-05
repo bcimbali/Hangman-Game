@@ -4,24 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Hangman Game</title>
 
 </head>
-<body>
-    <h1>Press any key to get started!</h1>
-    <!-- <p>Select a region:
-        <span id="east">East</span>
-        <span id="south">South</span>
-        <span id="midwest">Midwest</span>
-        <span id="west">West</span>
-    </p> -->
-    <p>Wins: <span id="wins"></span>  </p>
-    <p>Losses: <span id="losses"></span>  </p>
-    <p>Guesses remaing:  <span id="guesses-remaining"></span>  </p>
-    <p>Word to Guess: <span id="blanks"></span> </p>
-    <p>Letters already guessed:  <span id="already-guessed"></span>  </p>
-    <p id="hint">Click Here to get a hint: <span id="clue"></span> </p>
-    <p></p>
+<body class="body">
+    <section class="section">
+        <article class="article most-fonts">
+            <div class="left-side-of-article">
+
+            </div>
+            <div class="right-side-of-article">
+                <h1>Press any key to get started!</h1>
+                <p>Wins: <span id="wins"></span></p>
+                <p>Losses: <span id="losses"></span> </p>
+                <p>Guesses remaing:  <span id="guesses-remaining"></span>  </p>
+                <p>Word to Guess: <span id="blanks"></span> </p>
+                <p>Letters already guessed:  <span id="already-guessed"></span>  </p>
+                <p id="hint">Click Here to get a hint: <span id="clue"></span> </p>
+            </div>
+        </article>
+        <img src="./assets/images/us.svg" class="map">
+    </section> 
+
 
     <script src="./assets/javascript/game.js" ></script>
 </body>
