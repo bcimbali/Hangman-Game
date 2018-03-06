@@ -35,10 +35,16 @@ html {
     display: flex;
     align-items: center;
     border: 2px solid white;
+    border-radius: 2rem;
     height: 7rem;
     justify-content: center;
     margin: 1%;
     width: 100%;
+  }
+
+  .box-text {
+    /* color: transparent; */
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   }
   
   .button {
