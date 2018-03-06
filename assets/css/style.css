@@ -45,6 +45,7 @@ html {
 
   .box-text {
     /* color: transparent; */
+    color: rgb(39, 39, 39);
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   }
   
