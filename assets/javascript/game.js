@@ -91,6 +91,7 @@ blanksGuessStr = blanksGuess.join(" ");
 document.getElementById("blanks").innerHTML = blanksGuessStr; 
 let getHint = document.getElementById("hint");
 let clue = document.getElementById("clue");
+let letters = /^[A-Za-z]+$/;
 
 
 hints = ['This state introduced the Mardi Gras to the western world. The celebration is held on Shrove Tuesday, the day before Lent begins.',
@@ -175,21 +176,16 @@ function init() {
     document.getElementById("losses").innerHTML = losses;
 }
 
-// function correctState() {
-//     document.getElementById("alaska") = function()
-//         {
-//         this.style.backgroundColor = "white";
-//         }
-// }
-
 // ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
 
 document.onkeyup = function(event) {
     // On the key up, set the variable userText to the key content of the event.
-    console.log("State" + states.indexOf(chosenState));
-    console.log(chosenState);
-    console.log("Hint" + hints.indexOf(chosenState));
+    // console.log("State" + states.indexOf(chosenState));
+    // console.log(chosenState);
+    // console.log("Hint" + hints.indexOf(chosenState));
     userText = event.key.toLowerCase();
+    userCode = event.which;
+    if (userCode >= 65 && userCode <= 90) {
         if (lettersGuessed.includes(userText)) {
             alert("Please choose another letter!");
         }
@@ -211,16 +207,20 @@ document.onkeyup = function(event) {
                 }
             }          
         }
-    if (guessesRemaining === 0) {
-        losses++;
-        // alert("You lose");
-        init();
+        if (guessesRemaining === 0) {
+            losses++;
+            // alert("You lose");
+            init();
+        }
+        else if (computerArray.toString() === blanksGuess.toString()) {
+            wins++;
+            document.getElementById(chosenState.toString()).style.backgroundColor = 'white';
+            document.getElementById(chosenState.toString()).style.color = 'green';
+            // alert("You win!");
+            init();
+        }
     }
-    else if (computerArray.toString() === blanksGuess.toString()) {
-        wins++;
-        document.getElementById(chosenState.toString()).style.backgroundColor = 'white';
-        document.getElementById(chosenState.toString()).style.color = 'green';
-        // alert("You win!");
-        init();
+    else {
+        console.log("you did not press a letter key");
     }
 }
