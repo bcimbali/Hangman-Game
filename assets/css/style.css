@@ -24,8 +24,12 @@ html {
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
-    height: 30vh;
+    margin: 2%;
     width: 95%;
+  }
+
+  .blanks {
+    font-size: larger;
   }
 
   .body {
@@ -53,12 +57,17 @@ html {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 2rem;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: bold;
-    padding: 0.5% 1.5%;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
   }
 
-  .button:focus {outline:0;}
+  .button:focus {
+    outline:0;
+  }
 
   .button:hover {
     background-color: rgba(194, 192, 192, 0.1);
@@ -68,10 +77,14 @@ html {
     background-color: rgb(110, 110, 110);
   }
 
+  .clue {
+    font-style: italic;
+  }
+
   .header {
       align-items: center;
       display: flex;
-      height: 10vh;
+      height: 8vh;
       justify-content: center;
       text-align: center;
       width: 100%;
@@ -83,7 +96,8 @@ html {
 
   .left-side-of-article {
     height: 100%;
-    padding: 5%;
+    line-height: 2rem;
+    padding: 1% 2%;
     width: 100%;
   }
 
@@ -95,11 +109,20 @@ html {
       width: 95%;
   }
 
-  .right-side-of-article {
+  .middle-side-of-article {
     border-left: 2px dashed white;
     height: 100%;
     line-height: 2rem;
-    padding: 2% 5%;
+    padding: 1% 2%;
+    width: 100%;
+  }
+
+  .right-side-of-article {
+    border-left: 2px dashed white;
+    font-size: 0.75rem;
+    height: 100%;
+    line-height: 1rem;
+    padding: 1% 2%;
     width: 100%;
   }
 
