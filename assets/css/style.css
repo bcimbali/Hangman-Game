@@ -140,3 +140,23 @@ html {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+
+@media screen and (max-width: 640px) {
+  .heading-font {
+    font-size: 2rem;
+  }
+
+  .left-side-of-article {
+    line-height: 1.7rem;
+  }
+
+  .middle-side-of-article {
+    line-height: 1.7rem;
+  }
+
+  .right-side-of-article {
+    line-height: 1rem;
+  }
+
+}
