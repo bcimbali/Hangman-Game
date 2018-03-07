@@ -1,16 +1,5 @@
 
 // ---------------------------------------------- CREATE VARIABLES ----------------------------------------------
-// window.onload = function() {
-//     document.getElementById("alaska").onmouseover = function()
-//       {
-//         this.style.backgroundColor = "#9933ff";
-//       }
-  
-//       document.getElementById("alaska").onmouseout = function()
-//       {
-//         this.style.backgroundColor = "transparent";
-//       }
-// }
 // Set the win & loss counts to zero.
 let wins = 0;
 document.getElementById("wins").innerHTML = wins;
@@ -71,7 +60,8 @@ let states = ['alabama',
                 'washington', 
                 'west-virginia',
                 'wisconsin', 
-                'wyoming'];
+                'wyoming',
+                'district-of-columbia'];
 // Generate a random number based on the length of the array.
 let randomNumber = Math.floor((Math.random() * states.length));
 // Chose a state for the game.
@@ -152,7 +142,8 @@ hints = ['This state introduced the Mardi Gras to the western world. The celebra
             'This state has more glaciers than the other 47 contiguous states combined.',
             '75% of this state is covered by forests.',
             'This state has the Toilet Paper Capital of the World.',
-            'This state had the first official National Park.'];
+            'This state had the first official National Park.',
+            'Residents in its largest city drink more wine per capita than residents of any of the 50 states'];
 
 getHint.onclick = function() {
     clue.innerHTML = hints[states.indexOf(chosenState)];
@@ -228,6 +219,7 @@ document.onkeyup = function(event) {
     else if (computerArray.toString() === blanksGuess.toString()) {
         wins++;
         document.getElementById(chosenState.toString()).style.backgroundColor = 'white';
+        document.getElementById(chosenState.toString()).style.color = 'green';
         // alert("You win!");
         init();
     }
