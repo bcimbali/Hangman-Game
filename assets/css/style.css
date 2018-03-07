@@ -24,7 +24,7 @@ html {
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
-    margin: 2%;
+    margin-bottom: 1rem;
     width: 95%;
   }
 
@@ -84,8 +84,9 @@ html {
   .header {
       align-items: center;
       display: flex;
-      height: 8vh;
+      /* height: 8vh; */
       justify-content: center;
+      padding: 1.5rem 0;
       text-align: center;
       width: 100%;
   }
