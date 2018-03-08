@@ -6,7 +6,7 @@ document.getElementById("wins").innerHTML = wins;
 let losses = 0;
 document.getElementById("losses").innerHTML = losses;
 
-// Set total guess count to 10.
+// Set total guess count to 3.
 let guessesRemaining = 3;
 // Go to the DOM and the get the guesses-remaining id and set it to guessRemaining.
 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
