@@ -91,8 +91,6 @@ blanksGuessStr = blanksGuess.join(" ");
 document.getElementById("blanks").innerHTML = blanksGuessStr; 
 let getHint = document.getElementById("hint");
 let clue = document.getElementById("clue");
-let letters = /^[A-Za-z]+$/;
-
 
 hints = ['This state introduced the Mardi Gras to the western world. The celebration is held on Shrove Tuesday, the day before Lent begins.',
             'This state motto is North to the Future.',
@@ -146,6 +144,8 @@ hints = ['This state introduced the Mardi Gras to the western world. The celebra
             'This state had the first official National Park.',
             'Residents in its largest city drink more wine per capita than residents of any of the 50 states'];
 
+// ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
+
 getHint.onclick = function() {
     clue.innerHTML = hints[states.indexOf(chosenState)];
 };
@@ -154,7 +154,6 @@ function init() {
     guessesRemaining = 3;
     document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
     lettersGuessed = [];
-    // guessedLetters = document.getElementById("already-guessed");
     document.getElementById("already-guessed").innerHTML = lettersGuessed;
     randomNumber = Math.floor((Math.random() * states.length));
     chosenState = states[randomNumber];
@@ -176,13 +175,7 @@ function init() {
     document.getElementById("losses").innerHTML = losses;
 }
 
-// ---------------------------------------------- CREATE FUNCTIONS ----------------------------------------------------
-
 document.onkeyup = function(event) {
-    // On the key up, set the variable userText to the key content of the event.
-    // console.log("State" + states.indexOf(chosenState));
-    // console.log(chosenState);
-    // console.log("Hint" + hints.indexOf(chosenState));
     userText = event.key.toLowerCase();
     userCode = event.which;
     if (userCode >= 65 && userCode <= 90) {
@@ -194,7 +187,6 @@ document.onkeyup = function(event) {
                 guessesRemaining--;
                 document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
                 lettersGuessed.push(userText);
-                // document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
                 document.getElementById("already-guessed").innerHTML = lettersGuessed;
             } 
             else { 
@@ -209,14 +201,12 @@ document.onkeyup = function(event) {
         }
         if (guessesRemaining === 0) {
             losses++;
-            // alert("You lose");
             init();
         }
         else if (computerArray.toString() === blanksGuess.toString()) {
             wins++;
             document.getElementById(chosenState.toString()).style.backgroundColor = 'white';
             document.getElementById(chosenState.toString()).style.color = 'green';
-            // alert("You win!");
             init();
         }
     }
