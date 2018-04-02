@@ -6,6 +6,10 @@ A hangman game about all 50 states (and D.C.).  Each state you guess correctly g
 
 https://bcimbali.github.io/Hangman-Game/
 
+## Screenshot:
+
+![alt text](https://github.com/bcimbali/Responsive-Portfolio/blob/master/assets/images/Cartographer_H_New_Screenshot.PNG?raw=true)
+
 ## Built with:
 
 - HTML
