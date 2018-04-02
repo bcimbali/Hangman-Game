@@ -8,7 +8,7 @@ https://bcimbali.github.io/Hangman-Game/
 
 ## Screenshot:
 
-![alt text](https://github.com/bcimbali/Responsive-Portfolio/blob/master/assets/images/Cartographer_H_New_Screenshot.PNG?raw=true)
+![cartographer hangman game screenshot](https://github.com/bcimbali/Responsive-Portfolio/blob/master/assets/images/Cartographer_H_New_Screenshot.PNG?raw=true)
 
 ## Built with:
 
