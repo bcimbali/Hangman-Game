@@ -150,6 +150,18 @@ getHint.onclick = function() {
     clue.innerHTML = hints[states.indexOf(chosenState)];
 };
 
+// Possible way to make a function for the blanks
+// function createDashWord(word) {
+//     for (var i=0; i < computerChoice.length; i++) {
+//         if (computerChoice[i] === "-") {
+//             blanksGuess.push("-");
+//         }
+//         else {
+//             blanksGuess.push("_");
+//         }
+//     }
+// }
+
 function init() {
     guessesRemaining = 3;
     document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
